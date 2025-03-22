@@ -15,7 +15,7 @@ module Abizvn
 
       friendly_id :slug_candidates
 
-      validates :status, :category, :title, presence: true
+      validates :status, :category, :title, :description, presence: true
 
       private
 

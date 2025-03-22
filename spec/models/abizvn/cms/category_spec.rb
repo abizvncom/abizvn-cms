@@ -17,4 +17,21 @@ RSpec.describe Abizvn::Cms::Category, type: :model do
       expect(Abizvn::Cms::Category.ancestors).to include(Commonbase::RansackSearchable)
     end
   end
+
+  describe 'methods' do
+    context 'count articles' do
+      let(:category) { FactoryBot.create(:category) }
+      let(:status) { FactoryBot.create(:general_setting) }
+
+      before do
+        Abizvn::Cms::Article.create(category: category, status: status, title: 'Article 1', description: 'Desc')
+        Abizvn::Cms::Article.create(category: category, status: status, title: 'Article 2', description: 'Desc')
+      end
+
+      it 'returns correct value for articles_count' do
+        expect(category.articles.count).to eq(2)
+        expect(category.articles_count).to eq(2)
+      end
+    end
+  end
 end
