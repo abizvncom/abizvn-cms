@@ -35,6 +35,7 @@ end
 
 # Requires factories for testing
 Dir.glob(File.join(File.dirname(__FILE__), 'factories', '**', '*.rb')).each { |file| require file }
+Dir.glob(File.join(File.dirname(__FILE__), 'support', '*.rb')).each { |file|  require file }
 
 RSpec.configure do |config|
   Shoulda::Matchers.configure do |shoulda_config|
@@ -43,6 +44,8 @@ RSpec.configure do |config|
       with.library :rails
     end
   end
+
+  config.include Abizvn::Cms::CmsValidationHelpers
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_paths = [
