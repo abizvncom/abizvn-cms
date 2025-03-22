@@ -23,6 +23,9 @@ Gem::Specification.new do |spec|
   end
 
   spec.add_dependency "rails", "~> 7.2"
+  spec.add_dependency "abizvn-general", "~> 0.2"
+  spec.add_dependency "abizvn-media", "~> 0.1"
+  spec.add_dependency "jsonapi-serializer", "~> 2.2"
 
   spec.add_development_dependency 'rspec-rails', '~> 7.0'
   spec.add_development_dependency 'shoulda-matchers', '~> 6.2'
