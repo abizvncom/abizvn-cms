@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    abizvn-cms (0.1.0)
+    abizvn-cms (0.1.1)
       abizvn-general (~> 0.2)
       abizvn-media (~> 0.1)
       commonbase (~> 0.2)
