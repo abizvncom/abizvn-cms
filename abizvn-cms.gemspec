@@ -32,5 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec-rails', '~> 7.0'
   spec.add_development_dependency 'shoulda-matchers', '~> 6.2'
   spec.add_development_dependency "factory_bot_rails", '~> 6.4'
-  spec.add_development_dependency "byebug", '~> 11.1'
+  spec.add_development_dependency "byebug", '~> 12.0'
 end
