@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_04_26_050330) do
+ActiveRecord::Schema[7.2].define(version: 2025_04_27_041233) do
   create_table "cms_articles", force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
@@ -32,6 +32,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_04_26_050330) do
     t.string "code", null: false
     t.string "name", null: false
     t.integer "status_id"
+    t.integer "order", default: 0, null: false
     t.index ["status_id"], name: "index_cms_categories_on_status_id"
   end
 
