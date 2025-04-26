@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_03_22_034830) do
+ActiveRecord::Schema[7.2].define(version: 2025_04_26_050330) do
   create_table "cms_articles", force: :cascade do |t|
     t.string "title", null: false
     t.text "description", null: false
@@ -25,12 +25,14 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_22_034830) do
   end
 
   create_table "cms_categories", force: :cascade do |t|
-    t.integer "general_id", null: false
     t.string "tag", default: "", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "articles_count", default: 0, null: false
-    t.index ["general_id"], name: "index_cms_categories_on_general_id"
+    t.string "code", null: false
+    t.string "name", null: false
+    t.integer "status_id"
+    t.index ["status_id"], name: "index_cms_categories_on_status_id"
   end
 
   create_table "general_settings", force: :cascade do |t|
@@ -46,5 +48,5 @@ ActiveRecord::Schema[7.2].define(version: 2025_03_22_034830) do
 
   add_foreign_key "cms_articles", "cms_categories", column: "category_id"
   add_foreign_key "cms_articles", "general_settings", column: "status_id"
-  add_foreign_key "cms_categories", "general_settings", column: "general_id"
+  add_foreign_key "cms_categories", "general_settings", column: "status_id"
 end
