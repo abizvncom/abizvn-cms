@@ -9,7 +9,7 @@ module Abizvn
       scope :ordered, -> { order(updated_at: :desc) }
 
       belongs_to :status, class_name: 'Abizvn::General::GeneralSetting'
-      belongs_to :category, class_name: 'Category', counter_cache: true
+      belongs_to :category, class_name: Abizvn::Cms.category_class, counter_cache: true
 
       has_many :comments, as: :commentable, dependent: :destroy
 
