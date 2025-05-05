@@ -1,6 +1,8 @@
 module Abizvn
   module Cms
     class CategoryArticlesSerializer < CategoryLiteSerializer
+      attributes :description
+
       attribute :articles do |entity, params|
         next unless params[:articles].present?
         
