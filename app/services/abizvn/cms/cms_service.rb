@@ -3,8 +3,8 @@ module Abizvn
     class CmsService
       STATUS_PUBLIC = 'public'.freeze
       
-      STATUS_TABLE_NAME = GeneralSetting.table_name
-      ARTICLE_TABLE_NAME = Article.table_name
+      STATUS_TABLE_NAME = Abizvn::General::GeneralSetting.table_name
+      ARTICLE_TABLE_NAME = Abizvn::Cms::Article.table_name
   
       def self.get_articles_by_status(status_codes, filter_options)
         category_id = filter_options[:category_id]
