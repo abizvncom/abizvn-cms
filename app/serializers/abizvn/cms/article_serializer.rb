@@ -1,7 +1,7 @@
 module Abizvn
   module Cms
     class ArticleSerializer < ArticleLiteSerializer
-      attributes :description, :created_at
+      attributes :description, :full_content
     
       attribute :category do |article|
         if article.category
