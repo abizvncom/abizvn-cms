@@ -3,7 +3,7 @@ module Abizvn
     class CategoryLiteSerializer
       include JSONAPI::Serializer
 
-      attributes :id, :code, :name, :title
+      attributes :id, :code, :tag, :name, :title
     end
   end
 end
