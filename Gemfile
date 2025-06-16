@@ -24,6 +24,6 @@ gem 'friendly_id', '~> 5.1'
 group :development, :test do
   gem 'rspec-rails', '~> 7.0'
   gem 'shoulda-matchers', '~> 6.2'
-  gem 'factory_bot_rails', '~> 6.4'
+  gem 'factory_bot_rails', '~> 6.5'
   gem 'byebug', '~> 11.1'
 end
