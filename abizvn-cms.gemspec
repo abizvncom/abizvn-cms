@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
     Dir.glob(["app/**/*", "config/**/*", "db/**/*", "lib/**/*", "spec/**/*", "MIT-LICENSE", "Rakefile", "README.md"]).reject { |f| f.start_with?("spec/dummy/") }
   end
 
-  spec.add_dependency "rails", "~> 7.2"
+  spec.add_dependency "rails", ">= 7.2", "< 9.0"
   spec.add_dependency 'commonbase', '~> 0.2'
   spec.add_dependency "abizvn-general", "~> 0.2"
   spec.add_dependency "abizvn-media", "~> 0.1"
