@@ -19,7 +19,7 @@ gem 'commonbase'
 gem "abizvn-general"
 gem "abizvn-media"
 gem "jsonapi-serializer", "~> 2.2"
-gem 'friendly_id', '~> 5.1'
+gem 'friendly_id', '~> 5.6'
 
 group :development, :test do
   gem 'rspec-rails', '~> 7.0'
